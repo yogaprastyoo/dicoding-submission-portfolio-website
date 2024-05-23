@@ -1,0 +1,401 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap);
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	color: #000;
+	background-color: #ffffff;
+	/* background-color: #d9d9d9; */
+	overflow-x: hidden;
+	animation: body 4s ease-in-out;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.container {
+	width: 90%;
+	margin: 1.5rem auto;
+}
+
+.btn-group {
+	display: flex;
+	width: fit-content;
+}
+
+/**
+* Header Style.
+*/
+header {
+	display: inline;
+}
+
+header .head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .head .logo {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+header .head .logo span {
+	font-weight: 700;
+}
+
+header .head .msg {
+	display: none;
+}
+
+header .head .btn-group button {
+	border: 1px solid #000;
+	border-radius: 100px;
+	background: 0 0;
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: all ease-in-out 0.3s;
+}
+
+header .head button:nth-child(1) {
+	padding: 0.5rem 1.62rem 0.5rem 1rem;
+}
+
+header .head button:nth-child(2) {
+	padding: 0.5rem 1rem 0.5rem 1.62rem;
+	margin-left: -0.95rem;
+}
+
+header .head .btn-group button:hover {
+	color: #fff;
+	background: #000;
+	transition: all ease-in-out 0.3s;
+}
+
+/**
+* Welcome Article Style.
+*/
+
+#welcome {
+	display: flex;
+	height: 70vh;
+	flex-direction: column;
+	justify-content: center;
+	/* background: #000; */
+}
+
+#welcome h1 {
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 113.156%;
+}
+
+#welcome p:nth-child(1) {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+#welcome p span {
+	color: #b00000;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+#welcome p:nth-child(3) {
+	margin-top: 3.5rem;
+	color: #5c5c5c;
+	font-size: 0.48rem;
+}
+
+#welcome .btn-group button {
+	margin-top: 0.8rem;
+	cursor: pointer;
+}
+
+#welcome .btn-group button:nth-child(1) {
+	padding: 0.875rem 1.25rem;
+	border: 1px solid #000;
+	background: 0 0;
+	font-family: Inter;
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+#welcome .btn-group button:nth-child(2) {
+	padding: 0.9375rem 1rem;
+	background: #bfbfbf;
+	border: 1px solid #000;
+	border-left: none;
+}
+
+/**
+* Navigation Style.
+*/
+main nav {
+	top: 30px;
+	display: flex;
+	position: sticky;
+	justify-content: center;
+	justify-items: center;
+	/* margin-top: 0rem !important; */
+	/* padding-top: 20px; */
+	/* background: #000; */
+}
+
+main nav ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 1.3rem;
+	border-radius: 3.4375rem;
+	border: 1px solid #747474;
+	background: rgba(116, 116, 116, 0.12);
+	backdrop-filter: blur(9px);
+}
+
+main nav ul li {
+	display: block;
+	text-align: center;
+	width: 50px;
+	cursor: pointer;
+}
+
+main nav ul li span {
+	color: #000;
+	font-family: Inter;
+	font-size: 0.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	transition: all 0.2s ease-in-out;
+}
+
+main nav ul li span:hover {
+	font-weight: 700;
+	transition: all 0.2s ease-in-out;
+}
+
+/**
+* Thank You Note Article Style.
+*/
+#thank-you-note {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	/* background: #000; */
+}
+
+#thank-you-note h1 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 2rem;
+}
+
+#thank-you-note h1 span {
+	font-weight: 700;
+}
+
+#thank-you-note p {
+	margin-top: 1rem;
+	margin-left: 0.3rem;
+	font-size: 0.7;
+	font-weight: 400;
+	text-decoration-line: underline;
+}
+
+.maintenance {
+	height: 100vh;
+	padding-top: 8rem;
+}
+
+/**
+* ScrollTop Style.
+*/
+.scroll-top {
+	display: inline;
+	visibility: hidden;
+	position: relative;
+}
+
+.scroll-top button {
+	display: inline;
+	justify-items: end;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	padding-bottom: 1rem;
+	float: right;
+}
+
+.scroll-top button svg {
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(9px);
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+	transition: scale 100ms;
+}
+
+.scroll-top button:active svg {
+	scale: 0.8;
+}
+
+/**
+* Style (sm).
+*/
+@media (min-width: 640px) {
+	.container {
+		max-width: 640px;
+	}
+
+	main nav ul {
+		width: 80%;
+	}
+}
+
+/**
+* Style (md) Tablet.
+*/
+@media (min-width: 768px) {
+	.container {
+		max-width: 768px;
+	}
+	#welcome h1 {
+		font-size: 5rem;
+	}
+}
+
+/**
+* Style (lg).
+*/
+@media (min-width: 1024px) {
+	.container {
+		max-width: 924px;
+	}
+
+	/**
+  * Header Style.
+  */
+	header .head .msg {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 50%;
+		font-size: 0.95rem;
+		font-weight: 400;
+	}
+
+	#welcome h1 {
+		font-size: 5.5rem;
+		max-width: 70%;
+	}
+
+	#welcome p:nth-child(2) {
+		font-size: 1.5rem;
+	}
+
+	#welcome p span {
+		font-size: 2rem;
+	}
+
+	/**
+  * Navigation Style.
+  */
+	main nav {
+		margin-top: 8rem !important;
+	}
+
+	main nav ul {
+		width: 50%;
+		padding: 1.25rem 3.125rem;
+	}
+
+	main nav ul li span {
+		font-size: 1rem;
+	}
+
+	/**
+  * Cursor Style.
+  */
+	#cursor-ring {
+		position: fixed;
+		translate: -50% -50%;
+		width: 70px;
+		height: 70px;
+		mix-blend-mode: difference;
+		background-color: #fafafa;
+		border-radius: 50%;
+		pointer-events: none;
+		transition: scale 100ms;
+		animation: cursor 0.7s ease-in-out;
+		display: none;
+		z-index: 100;
+	}
+
+	#cursor-ring.active {
+		scale: 0.75;
+	}
+
+	@keyframes cursor {
+		0% {
+			opacity: 0;
+		}
+		99% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+/**
+* Style (xl).
+*/
+@media (min-width: 1280px) {
+	.container {
+		max-width: 1220px;
+	}
+
+	#welcome h1 {
+		font-size: 5.5rem;
+		max-width: 50%;
+		font-weight: 400;
+	}
+}
+
+/**
+* Style (2xl).
+*/
+@media (min-width: 1536px) {
+	.container {
+		max-width: 1536px;
+	}
+
+	#welcome h1 {
+		margin-top: 12rem;
+		font-size: 7rem;
+	}
+
+	main nav {
+		margin-top: 15rem !important;
+	}
+}
